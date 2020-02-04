@@ -51,3 +51,13 @@ func binarySearch(array : [Int], target : Int) -> Bool
 
 let myArray = [2,5,65,32,45,9,1,34,3]
 binarySearch(array: myArray, target: 8)
+
+
+func isUnique(array : [Character]) -> Bool
+{
+    while array.count != 0 {
+        
+    }
+    return true
+}
+
