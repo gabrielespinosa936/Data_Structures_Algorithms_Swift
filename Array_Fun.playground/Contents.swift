@@ -53,11 +53,14 @@ let myArray = [2,5,65,32,45,9,1,34,3]
 binarySearch(array: myArray, target: 8)
 
 
-func isUnique(array : [Character]) -> Bool
+func isUnique(array : [Int])
 {
+    var index = 0
     while array.count != 0 {
-        
+        var theSum = array[index]
+        print(theSum)
+        index = index + 1
     }
-    return true
+    
 }
 
