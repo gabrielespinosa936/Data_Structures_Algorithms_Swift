@@ -17,19 +17,18 @@ class TwoSum
         return []
     }
     
-    func mapTwoSum(array : [Int], target : Int) -> [Int]
+    func mapTwoSum(array : [Int], target : Int) -> [Int]?
     {
         var map : [Int:Int] = [:]
-        for i in 0..<array.count
+        for index in 0..<array.count
         {
-            let complement = target - array[i]
-            if complement == target
+            if let complement = map[target - array[index]]
             {
-                return [complement, i] // returning the indices of the sum of target
+                return [complement,index]
             }
-            map[i] = i // If the sum is not found add it to the map
+            map[array[index]] = index
         }
-        return [] // Not found
+        return nil
     }
 }
 
@@ -38,4 +37,4 @@ let myArray = [2,5,8,10,11,6]
 let myTarget = 17
 
 print(twoSum.twoSum(array: myArray, target: myTarget))
-print(twoSum.mapTwoSum(array: myArray, target: myTarget))
+print(twoSum.mapTwoSum(array: myArray, target: myTarget)!)
