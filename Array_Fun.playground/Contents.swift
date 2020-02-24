@@ -20,6 +20,7 @@ while numbers.count != 0
 print(tempArray)
 
 
+
 func binarySearch(array : [Int], target : Int) -> Bool
 {
     let startIndex = 0
@@ -53,14 +54,36 @@ let myArray = [2,5,65,32,45,9,1,34,3]
 binarySearch(array: myArray, target: 8)
 
 
-func isUnique(array : [Int])
+func isUnique(array : [Int]) -> Bool
 {
-    var index = 0
-    while array.count != 0 {
-        var theSum = array[index]
-        print(theSum)
-        index = index + 1
+    var newArray = array
+    newArray.sort()
+    for num in 0..<array.count-1
+    {
+        if newArray[num] == newArray[num+1]
+        {
+            return false
+        }
     }
-    
+    return true
 }
 
+print("Is Unique")
+
+
+var uniqueArray : [Int] = []
+var i = 0
+while i < 10
+{
+    let randomInt = Int.random(in: 0...100)
+    uniqueArray.append(randomInt)
+    i = i+1
+}
+var a = [2,3,1,5,6]
+
+if(isUnique(array: a) == true)
+{
+    print("This array is unique")
+}else{
+    print("This array is not unique")
+}
