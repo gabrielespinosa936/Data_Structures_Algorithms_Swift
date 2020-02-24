@@ -122,3 +122,16 @@ func isMonotonic(array: [Int]) -> Bool {
 
 let monoArray = [1,2,2,3]
 isMonotonic(array: monoArray)
+
+myspace()
+msg(string: "Just messing around with nested functions")
+func nestFunc(name : String)
+{
+    func inFunc()
+    {
+        print("Howdy \(name)")
+    }
+    inFunc()
+}
+
+nestFunc(name: "Gabe")
