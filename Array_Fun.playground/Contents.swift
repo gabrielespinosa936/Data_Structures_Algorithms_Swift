@@ -18,7 +18,15 @@ while numbers.count != 0
     tempArray.append(numbers.removeLast())
 }
 print(tempArray)
-
+func myspace()
+{
+    print("")
+    print("")
+}
+func msg(string : String)
+{
+    print(string)
+}
 
 
 func binarySearch(array : [Int], target : Int) -> Bool
@@ -67,8 +75,8 @@ func isUnique(array : [Int]) -> Bool
     }
     return true
 }
-
-print("Is Unique")
+myspace()
+print("Is Unique Function")
 
 
 var uniqueArray : [Int] = []
@@ -80,10 +88,37 @@ while i < 10
     i = i+1
 }
 var a = [2,3,1,5,6]
-
+myspace()
 if(isUnique(array: a) == true)
 {
     print("This array is unique")
 }else{
     print("This array is not unique")
 }
+
+myspace()
+print("Is Monotonic")
+
+
+func isMonotonic(array: [Int]) -> Bool {
+    var inc = true
+    var dec = true
+    for i in 0..<(array.count-1)
+    {
+        if array[i] < array[i+1]
+        {
+            dec = false
+            return dec
+        }
+        if array[i] > array[i+1]
+        {
+            inc = false
+            return inc
+        }
+       
+    }
+    return inc || dec
+}
+
+let monoArray = [1,2,2,3]
+isMonotonic(array: monoArray)
