@@ -39,6 +39,25 @@ func isPalindrom(string : String) -> Bool
 
 isPalindrom(string: "racecar")
 
+func sumUpArray(array : [Int])
+{
+    var theSum : Int = 0
+    for i in 0..<array.count - 1
+    {
+        theSum = theSum + array[i]
+    }
+    print(theSum)
+    if(theSum % 2 == 0)
+    {
+        print("Even")
+    }else {
+        print("Odd")
+    }
+}
+
+let intArray = [2,3,5,7,0]
+sumUpArray(array: intArray)
+
 class Node
 {
     var value : Int
@@ -81,8 +100,8 @@ class LinkedList
         var currentNode = head
         var fastNode : Node?
         var previousNode : Node?
-        
-        
+
+
     }
 }
 
