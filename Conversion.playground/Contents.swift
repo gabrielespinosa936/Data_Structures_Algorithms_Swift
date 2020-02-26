@@ -95,13 +95,33 @@ class LinkedList
         }
         
     }
+    func deleteNode(target : Int) -> Bool
+    {
+        var didDelete : Bool = false
+        if head?.value == target
+        {
+            head = head?.next
+            didDelete = true
+        }
+        var currentNode = head
+        var previousNode : Node?
+        while currentNode?.next != nil && currentNode?.value != target {
+            previousNode = currentNode
+            currentNode = currentNode?.next
+        }
+        previousNode?.next = currentNode?.next
+        return didDelete
+    }
     func removeDuplicates()
     {
         var currentNode = head
         var fastNode : Node?
         var previousNode : Node?
-
-
+        
+        currentNode = fastNode
+        fastNode = previousNode
+        previousNode = currentNode
+        
     }
 }
 
@@ -110,8 +130,10 @@ let list = LinkedList()
 var index = 0
 while(index < 10)
 {
-    let randomInt = Int.random(in: 0...100)
-    list.insertNode(value: randomInt)
+    
+    list.insertNode(value: index)
     index = index + 1
 }
 list.displayList()
+
+
