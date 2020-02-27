@@ -1,6 +1,9 @@
 import UIKit
 
-
+func p()
+{
+    print("This is just a test")
+}
 
 func uniqueCharToAsciiConversion(string : String) -> Bool
 {
